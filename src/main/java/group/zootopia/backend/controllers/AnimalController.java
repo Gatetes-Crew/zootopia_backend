@@ -38,10 +38,10 @@ public class AnimalController {
         return animalService.getAnimalCount();
     }
 
+
     @PostMapping("/add")
     public ResponseEntity<Animal> create(@NonNull @RequestBody Animal animal) {
         Animal newAnimal = animalService.save(animal);
         return ResponseEntity.status(201).body(newAnimal);
     }
-
 }

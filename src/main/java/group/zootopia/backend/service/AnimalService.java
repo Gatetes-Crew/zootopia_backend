@@ -8,9 +8,8 @@ import group.zootopia.backend.repositories.AnimalRepository;
 @Service
 
 public class AnimalService {
-
+  
     AnimalRepository animalRepository;
-
     public AnimalService(AnimalRepository animalRepository) {
         this.animalRepository = animalRepository;
     }
@@ -24,6 +23,7 @@ public class AnimalService {
         Animal newAnimal = animalRepository.save(animal);
         return newAnimal;
     }
+
     
 
     // Counter
@@ -37,4 +37,5 @@ public class AnimalService {
         List<Animal> animals = animalRepository.findByFamily(family);
         return animals;
     }
+
 }
