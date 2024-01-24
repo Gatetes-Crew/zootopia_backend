@@ -25,6 +25,19 @@ public class AnimalController {
     public List<Animal> index() {
         return animalService.getAll();
     }
+   
+    // Filter
+    @GetMapping(path = "/family")
+    public List<Animal> filterByFamily(@RequestBody String family) {
+        return animalService.getByFamily(family);
+    }
+
+    // Counter
+    @GetMapping(path = "/count")
+    public long getAnimalCount() {
+        return animalService.getAnimalCount();
+    }
+
 
     @PostMapping("/add")
     public ResponseEntity<Animal> create(@NonNull @RequestBody Animal animal) {

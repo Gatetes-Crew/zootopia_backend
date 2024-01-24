@@ -15,8 +15,10 @@ public class Animal {
     private String type;
     private char gender;
     private String date;
+
     public Animal() {
     }
+
     // Constructor adicional para mantener compatibilidad con el constructor existente
     public Animal(long id, String name, String family, String type, char gender, String date) {
         this.id = id;
@@ -25,6 +27,7 @@ public class Animal {
         this.type = type;
         this.gender = gender;
         this.date = date;
+      
     }
     // Constructor con fecha como String
     public Animal(String name, String family, String type, char gender, String date) {
